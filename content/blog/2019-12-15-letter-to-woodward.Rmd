@@ -1,0 +1,23 @@
+---
+title: Letter to  Woodward
+author: ''
+date: '2019-12-15'
+slug: letter-to-woodward
+categories: []
+tags: []
+description: ''
+---
+
+Dear Woodward,
+
+I am sure you are very busy looking at all the websites submitted as well as all the biostats projects.
+I just wanted to write this to express my gratitude to you. You have been my favorite professor since coming here to UT Austin. I only took compuational biology and bioinformatics because I loved you as a professor in biostats. 
+
+I appreciate all that you do for your students and the passion you have for your classes. Thanks to you I am now an R fan, which is not a statement I would have thought I would have said in the past. 
+
+While I found this class challenging, I feel like I can never get the upper hand with R, I have still greatly enjoyed it. I know that was your first time teaching this class so I know it will only improve from here. 
+
+Thanking you for genuinely caring about your students and our success in you class. As well as keeping things interesting and fun in class. 
+
+Sincerly,
+Brianna
