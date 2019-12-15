@@ -15,7 +15,8 @@ I was not excited to learn python, it took me so long to finally understand are 
 While it was difficult for me to learn python I am glad I did. 
 The part that I enjoyed the most was learning needleman-wunsch and smtih-waterman. I thought it was fun doing it by hand but I could not imagine doing it on a large scale. However, luckily in python we were able to create a function that did the scoring for us. 
 
-```{python}
+The code we used was: 
+
 import numpy as np
 
 # Use these values to calculate scores
@@ -56,4 +57,9 @@ def sw_fun(mat):
     return mat
 
 sw_fun(mat)
-```
+
+
+This allowed us to use score needleman- wunsch as well as smith-waterman. 
+
+
+The only thing that has been difficult for me with python is that my laptop is 32 bit while the code above is for 64 therefore I cannot get it to knit. 

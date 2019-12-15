@@ -3,7 +3,7 @@ title: "First time with Python"
 author: "Brianna Weber"
 date: 2019-12-13T21:13:14-05:00
 categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+tags: []
 ---
 
 ```{r setup, include=FALSE}
@@ -14,3 +14,52 @@ I was not excited to learn python, it took me so long to finally understand are 
 
 While it was difficult for me to learn python I am glad I did. 
 The part that I enjoyed the most was learning needleman-wunsch and smtih-waterman. I thought it was fun doing it by hand but I could not imagine doing it on a large scale. However, luckily in python we were able to create a function that did the scoring for us. 
+
+The code we used was: 
+
+import numpy as np
+
+# Use these values to calculate scores
+match_score = 2
+mismatch_score = -1
+gap_penalty = -1
+
+# Make a score matrix with these two sequences
+seq1 = "ATGAT"
+seq2 = "AAGGAT"
+
+
+def sw_function(seq1,seq2,gap_penalty=-1, match_score=1, mismatch_score=-1):
+    m=len(seq1) #length of horizontal sequence
+    n=len(seq2) #length of vertical sequence
+    score=np.empty(shape=[n+1,m+1]) #array to hold scores
+   
+    for j in range(0, m + 1): score[0][j] = gap_penalty * j
+    for i in range(0, n + 1): score[i][0] = gap_penalty * i
+    
+    for i in range(1, n + 1): 
+        for j in range(1, m + 1):
+            insert = score[i - 1][j] + gap_penalty 
+            delete = score[i][j - 1] + gap_penalty 
+            match = score[i - 1][j - 1] + match_score if seq1[j-1]==seq2[i-1] else mismatch_score
+            score[i][j] = max(match, delete, insert)
+    return score
+
+
+mat=sw_function(seq1,seq2,gap_penalty,match_score,mismatch_score)
+
+def sw_fun(mat):
+    for i in range(len(mat)):
+        for j in range(len(mat[i])):
+            if mat[i][j]<0: 
+                mat[i][j]=0
+            
+    return mat
+
+sw_fun(mat)
+
+
+This allowed us to use score needleman- wunsch as well as smith-waterman. 
+
+
+The only thing that has been difficult for me with python is that my laptop is 32 bit while the code above is for 64 therefore I cannot get it to knit. 
