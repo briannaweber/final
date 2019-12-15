@@ -1,5 +1,5 @@
 ---
-title: "First time with Python"
+title: "First Time with Python"
 author: "Brianna Weber"
 date: 2019-12-13T21:13:14-05:00
 categories: ["R"]
@@ -17,6 +17,7 @@ The part that I enjoyed the most was learning needleman-wunsch and smtih-waterma
 
 The code we used was: 
 
+```{Python}
 import numpy as np
 
 # Use these values to calculate scores
@@ -24,7 +25,6 @@ match_score = 2
 mismatch_score = -1
 gap_penalty = -1
 
-# Make a score matrix with these two sequences
 seq1 = "ATGAT"
 seq2 = "AAGGAT"
 
@@ -46,9 +46,9 @@ def sw_function(seq1,seq2,gap_penalty=-1, match_score=1, mismatch_score=-1):
     return score
 
 
-mat=sw_function(seq1,seq2,gap_penalty,match_score,mismatch_score)
+  mat=sw_function(seq1,seq2,gap_penalty,match_score,mismatch_score)
 
-def sw_fun(mat):
+  def sw_fun(mat):
     for i in range(len(mat)):
         for j in range(len(mat[i])):
             if mat[i][j]<0: 
@@ -57,7 +57,7 @@ def sw_fun(mat):
     return mat
 
 sw_fun(mat)
-
+```
 
 This allowed us to use score needleman- wunsch as well as smith-waterman. 
 
